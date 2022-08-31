@@ -1,6 +1,11 @@
 import numpy as np
 
-#np.random.seed(0)
+np.random.seed(1)
+
+# def nonlin(x,deriv=False):
+#   if(deriv==True):
+#     return x*(1-x)
+#   return 1/(1+np.exp(-x))
 
 def sigmoid (x):
 
@@ -12,7 +17,7 @@ def sigmoid_derivative(x):
 
 #Input datasets
 
-inputs = np.array([[0,0],[0,1],[1,0],[1,1]])
+inputs = np.array([[0,0,1],[0,1,1],[1,0,1],[1,1,1]])
 
 expected_output = np.array([[0],[1],[1],[0]]) #As Xor is basically addition modulo 2
 
